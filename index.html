@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #f4f4f4 3px solid;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #66c7ff;
+        }
+
+        /* Showcase */
+        .showcase {
+            background:rgb(70, 70, 70) url('https://via.placeholder.com') no-repeat center center/cover;
+            height: 600px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .showcase h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .showcase p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* About */
+        .about {
+            padding: 20px;
+            margin-top: 30px;
+            background: #dfcdcd;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Skills */
+        .skills {
+            padding: 20px;
+            margin-top: 30px;
+            background: #f4f4f4;
+        }
+
+        .skills h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .skills li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Projects */
+        .projects {
+            padding: 20px;
+            margin-top: 30px;
+            background: #fff;
+        }
+
+        .projects h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .projects .project {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .project img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .project .project-info {
+            flex-grow: 1;
+        }
+
+        .project .project-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project .project-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 20px;
+            margin-top: 30px;
+            background: #f4f4f4;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact form input[type="text"],
+        .contact form input[type="email"],
+        .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: #333 1px solid;
+            font-size: 18px;
+        }
+
+        .contact form input[type="submit"] {
+            width: auto;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .contact form input[type="submit"]:hover {
+            background: #555;
+        }
+        
+        .container .sendbtn{
+            color: aqua;
+        }
+ 
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .showcase h2 {
+                font-size: 40px;
+            }
+
+            .showcase p {
+                font-size: 18px;
+            }
+
+            .about h2 {
+                font-size: 30px;
+            }
+
+            .about p {
+                font-size: 16px;
+            }
+
+            .skills h2 {
+                font-size: 30px;
+            }
+
+            .skills li {
+                font-size: 16px;
+            }
+
+            .projects h2 {
+                font-size: 30px;
+            }
+
+            .project img {
+                width: 100px;
+                height: 100px;
+                margin-right: 10px;
+            }
+
+            .project .project-info h3 {
+                font-size: 20px;
+            }
+
+            .project .project-info p {
+                font-size: 16px;
+            }
+
+            .contact h2 {
+                font-size: 30px;
+            }
+
+            .contact form input[type="text"],
+            .contact form input[type="email"],
+            .contact form textarea,
+            .contact form input[type="submit"] {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>SHUB</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="showcase">
+    <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I am a professional web developer with expertise in creating modern and responsive websites.</p>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer with over 2 years of experience in front-end and back-end development.</p>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="p1.jpg" alt="Project 1">
+            <div class="project-info">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <div class="project-info">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="project3.jpg" alt="Project 3">
+            <div class="project-info">
+                <h3>Project 3</h3>
+                <p>Description of project 3.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form name="submit-to-google-sheet">
+            <div class="mb-3">
+              <input name="name" type="text" class="form-control" placeholder="name" required>
+            </div>
+            <div class="mb-3">
+              <input name="email" type="email" class="form-control" placeholder="email" required>
+            </div>
+            <input name="message" type="text" class="form-control" placeholder="message" required>
+            </div>
+            <div class="sendbtn" style="
+ background-color: #7cd1b2; /* Green */
+  border: none;
+  color: rgb(255, 0, 0);
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+            ">
+                <button style="width: 250px; height: 50px; color: rgb(255, 0, 0); background-color: palegreen;" type="submit" class="btn btn-primary">Send</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+</section>
+
+</style>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzqaR16uRZ4KOBz47aI8gPTthPSm7-cC9EYrBgYqWUtexsBRs0umZqnuuCob9NTDQeN/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
+    const form = document.forms['submit-to-google-sheet'];
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
